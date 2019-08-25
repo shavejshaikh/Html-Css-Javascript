@@ -1,0 +1,325 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title> </title>
+<style type="text/css">
+	body
+	{
+
+		background-image:url('images.jpg');
+		 background-repeat: repeat;
+	}
+
+</style>
+
+
+
+
+<script type="text/javascript">
+function validation()
+		{
+			
+				flag=true;
+				//firstname
+					if (document.getElementById("fname").value.length<1)
+					{
+						alert("Enter  the FirstName");
+						flag=false;
+					}
+
+						else
+						{
+							//middlename
+								if (document.getElementById("lname").value.length<1)
+								{	
+									alert("Enter  the LastName");
+									flag=false;
+								}
+
+								else
+								{
+								//lastname
+									if (document.getElementById("cname").value.length<1)
+									{
+										alert("Enter the CollegeName");
+										flag=false;
+								    }
+
+								    else
+								    {	//password
+								    	var p1=document.getElementById("pwd").value
+										var p2=document.getElementById("repwd").value	
+										if(p1=="")
+										{
+											alert("Enter the password");
+											flag=false
+										}
+										else if(p2=="" || p2!=p1)
+										{
+											alert("Password is incorrect");
+											flag=false
+										}
+
+										else
+										{
+												//Mobile number
+												var bb=document.getElementById("number").value;
+												if (bb==" " || bb.length!=10) 
+												{
+													alert("Enter the proper mobile-number");
+													flag=false
+												}
+
+												else
+													{
+														//email-id
+														var x1=document.getElementById("email").value;
+														var x=document.getElementById("email").value
+												       	var ereg=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+
+														if (x=='')
+														{
+															alert("Enter Email-Id");
+															flag=false;
+														}
+
+														else if(!x.match(ereg))	
+														{  
+														  alert("Enter a valid Email-Id \n");  
+														  flag= false;
+												        }
+
+													        else
+															{
+																//checking for gender
+																var x=document.getElementById("male").checked;
+																var y=document.getElementById("female").checked;
+																if(x==false && y==false)
+																{
+																	alert("Enter the gender");
+																	flag=false
+																}
+																
+																			else
+																			{
+
+																				var sel = document.getElementById("select");
+																				if(sel.selectedIndex==4)
+																				{
+																					alert("Choose the Year")
+																					flag=false;
+																				}
+  																				else
+  																				{
+  																					if(flag=true)
+																				    {
+																				    	alert("Take A ScreenShot of it\n "+"Email id is: "+x1+"\n Password is: "+p1+ "\nSuccesFully Done")
+																				    	
+																				    }
+  																				}
+																			}
+
+															}
+
+
+												      }
+
+										}
+
+									}
+
+								}
+
+						}
+					
+		}
+
+
+
+	function validation1()
+	{
+		window.open("student.html");
+
+	}
+
+</script>
+
+
+
+<style type="text/css">
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+<ul>
+ 	 <li><a href="Finalwt">Home</a></li>
+ 	 <li><a href="Finalwt">About us</a></li>
+ 	 <li><a href="Finalwt">Contact us</a></li>
+
+ 	 <li class="dropdown">
+   	 <a href="javascript:void(0)" class="dropbtn">Login</a>
+   	 
+    <div class="dropdown-content">
+      <a href="teacher.html">Teacher</a>
+      <a href="student.html">Student</a>
+    </div>
+  </li>
+</ul>
+
+	
+	
+
+
+
+<form action="regstud.php" method="post" >
+	
+	<h1 align="center"> REGISTER </h1>
+	<table align="center">
+		<tr>
+					<hr>
+					<td> <label>FirstName: </label> </td>
+					<td> <input style="background-color: white" type="text" name="fname" id="fname" placeholder="FirstName" /></td>
+			</tr>	
+
+			<tr>
+					<td> <label>LastName: </label> </td>
+					<td> <input type="text" name="lname"  id="lname" placeholder="LastName"/></td>
+			</tr>	
+
+			<tr>
+					<td> <label>CollegeName: </label> </td>
+					<td> <input type="text" name="cname"  id="cname" placeholder="Watumull"/></td>
+			</tr> 
+
+			
+
+			<tr>
+					<td> <label>Password: </label> </td>
+					<td> <input type="password" name="password"  id="pwd" placeholder="Password"/></td>
+			</tr>	
+
+			<tr>
+					<td> <label>Retype-Password: </label> </td>
+					<td> <input style="background-color: white" type="password" name="repwd"  id="repwd" placeholder="ConfirmPassword"/></td>
+			</tr>
+			
+			<tr>
+					<td> <label>Mobileno: </label> </td>
+					<td> <input style="background-color: white" type="text" name="no" id="number" maxlength="10" placeholder="9820453890"/></td>
+			</tr>
+
+			<tr>
+					<td> <label>Email-Id: </label> </td>
+					<td> <input type="text" name="emailid" id="email" placeholder="pathan@gmail.com"/></td>
+			</tr>
+			
+			<tr>		
+					<td> <label>Gender: </label> </td>
+					<td>
+					 <input type="radio" name="gender" value="male" id="male" />Male
+					 <input type="radio" name="gender" value="female" id="female" />Female  
+					</td>
+			</tr>
+
+			<tr>
+					<td> <label>Year: </label> </td>
+					<td> <select name="dropdown" id="select">
+						
+						<option value="1year" selected>I Year </option>
+						<option value="2year" selected>II Year  </option>
+						<option value="3year" selected>III Year  </option>
+						<option value="4year" selected>IV Year  </option>
+						<option value="year"  selected>Year </option>
+						
+					</select>
+				</td>
+
+	
+			</tr>
+
+			<tr>
+
+					<td> 
+						<div> <br>
+    						<input style="margin-left: 20px" type="submit" value="Register" onclick="validation()">
+
+    						<input style="margin-left: 20px" type="reset"  value="Not-Register">
+    						<input style="margin-left: 20px" type="button"  value="<<Back" onclick="validation1()">
+						</div>
+					</td>
+					
+					
+			</tr>	
+
+
+
+	</table>
+
+</form>
+
+</body>
+
+</html>

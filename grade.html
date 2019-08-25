@@ -1,0 +1,151 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title>Submission</title>
+
+<style type="text/css">
+
+body{
+	background-color: maroon;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+<script type="text/javascript">
+	
+	function validation()
+		{
+			
+				flag=true;
+				
+					
+					
+					var sel1 = document.getElementById("Grade");
+
+						if(sel1.selectedIndex==0)
+						{
+							alert("Choose the Subject")
+							flag=false;
+						}
+
+								
+						else
+						{
+							if(flag==true)
+							{
+								alert("Grade is enter");
+								return true;
+							}
+					   }
+
+					
+			}
+
+</script>
+
+
+
+
+</head>
+<body>
+
+<ul>
+ 	 <li><a href="Finalwt.html">Home</a></li>
+ 	 <li><a href="about.html">About us</a></li>
+ 	 <li><a href="contact.html">Contact us</a></li>
+
+ 	 <li >
+      <a href="teacher.html">Teacher</a>
+   
+  </li>
+</ul>
+
+
+<form method="POST" action="sub.php">
+	<h1 align="center"> GRADE </h1>
+	<table align="center">
+
+		
+		<tr>
+			<td> Grade </td>
+			<td> <select name="Grade" id="Grade">
+				  <option value="gr">    grade</option>
+				  <option value="gr1">   1</option>
+				  <option value="gr2">   2</option>
+				  <option value="gr3">   3</option>
+				  <option value="gr4">   4</option>
+				  <option value="gr5">   5</option>
+				  
+			</select>
+			</td>
+		</tr>
+
+		<tr>
+			<td> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<br> <input type="submit" name="sub" value="Submit" onclick="validation()"></td>
+			<th> <br><input type="reset"  value="Reset"/></th>
+		</tr>
+
+	</table>
+
+</form>
+
+</body>
+
+</html>
+
+
+
