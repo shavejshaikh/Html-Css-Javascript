@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title></title>
+
+<script type="text/javascript">
+	
+	function onchange1(color)
+	{
+	
+		document.bgColor=color;
+	}
+
+	function changecolortext()
+	{
+		var c=document.getElementById("c1").value; <!-- text field id -->
+		document.bgColor=c;
+	} 
+
+
+</script>
+
+
+</head>
+
+<body>
+	
+<form>
+		<input type="button"  value="red" onclick="onchange1('red')">
+		<input type="button"  value="blue" onclick="onchange1('blue')">
+		<input type="button"  value="white" onclick="onchange1('white')">
+		<input type="button"  value="green" onclick="onchange1('green')">
+		<input type="button"  value="pink" onclick="onchange1('pink')">
+
+</form>
+	
+<form>
+	
+	Input <input type="text" name="r1" id="c1"/>
+	<input type="button"  value="select" onclick=" changecolortext()">
+
+</form>
+
+
+
+
+</body>
+
+</html>

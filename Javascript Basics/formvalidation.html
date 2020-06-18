@@ -1,0 +1,37 @@
+<html>
+<head>
+<script src="formValidate.js"></script>
+</head>
+<body bgcolor="#B0E0E6">
+Form
+<form action="success.html" name="f1" id="f1">
+Name: <input type="text" name="Name" id="name"><br>
+Password:<input type="password" name="pwd" id="pwd"><br>
+Gender:
+<input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">Female<br>
+Nationality :
+<input type="radio" name="Origin" value="Indian">Indian
+<input type="radio" name="Origin" value="Foreign">Foreign
+<br>
+Hobbies:
+<input type="checkbox" name="hobbies" value="Drawing">Drawing
+<input type="checkbox" name="hobbies" value="Reading">Reading
+<input type="checkbox" name="hobbies" value="swimming">Swimming
+<br>
+Address:<br>
+<textarea cols="45" rows="5"></textarea>
+<br>
+City:
+<select name="c1">
+<option value="">Select City</option>
+<option value="mum">Mumbai</option>
+<option value="pune">Pune</option>
+</select>
+<br>
+<input type="button" value="Save" onclick="validate()">
+
+<input type="reset" value="Cancel">
+</form>
+</body>
+</html>
