@@ -1,0 +1,169 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title> </title>
+<script type="text/javascript">
+	
+	function validation()
+	{
+		flag=true;
+		var email=document.getElementById("email").value;
+		var ereg=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+		var pass=document.getElementById("Password").value;
+		
+		
+				//email id
+				if (email=='')
+				{
+					alert("Enter the Email-Id");
+					flag=false;
+				}
+
+						else if(!email.match(ereg))
+						{
+							alert("Enter proper email-id")
+						}
+
+							else
+							{
+
+								//password
+									if (pass=='')
+									{	
+										alert("Enter  the password");
+										flag=false;
+									}
+								
+									else
+									{
+											if(flag=true)
+										 	{
+										 		alert("Success");
+										 		
+									  		}
+									}
+							}
+
+	}
+	
+	function validation1()
+	{
+		window.open("newstud.html");
+
+	}
+
+</script>
+
+
+<style type="text/css">
+
+body{
+	background-image:url('imag1.jpg');
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+<ul>
+ 	 <li><a href="Finalwt.html">Home</a></li>
+ 	 <li><a href="about.html">About us</a></li>
+ 	 <li><a href="contact.html">Contact us</a></li>
+ 	 <li ><a href="student.html">Student</a>
+   
+  </li>
+</ul>
+
+
+<form   method="post" action="retrievestud.php" >
+	<br>
+	<h1 align="center"> STUDENT LOGIN ID </h1>	
+		<table align="center">
+				
+		<tr>
+			<td> Email: </td>
+			<td> <input type="text" name="email" placeholder="student123@gmail.com" id="email" size="25"></td>
+		</tr>	
+		
+		<tr>
+			<td> Password: </td>
+			<td> <input type="Password" name="Password" id="Password" size="25">
+		
+		</tr>
+
+		<tr>
+			<th><input type="submit" value="Login" onclick="validation()"/> </th> 
+			<th><input type="button" value="New Register?" onclick="validation1()"></th>
+		</tr>
+
+	</table>
+
+</form>
+
+
+</body>
+
+</html>
